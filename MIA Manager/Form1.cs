@@ -160,7 +160,7 @@ namespace MIA_Manager
                 "Textures: " + textureDataTable.Rows.Count + "\n" +
                 "Resolution: " + width + " x " + height + "\n" +
                 "ID: " + ID + "\n" +
-                "Size: " + arraySize * 5 + " Bytes (" + pixelCount + " Pixels) ";
+                "Size: " + arraySize * 5 + " Bytes (" + pixelCount + " Pixels)";
 
             zoomTexture(zoom);
         }
