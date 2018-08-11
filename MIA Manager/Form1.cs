@@ -131,12 +131,10 @@ namespace MIA_Manager
             
             UInt32 pixelOffset = 0;
             UInt32 pixelCount = 0;
-            UInt32 highestAlpha = 0;
             for (int i = 0; i < arraySize; i++)
             {
                 UInt32 pixelEntryCount = (UInt32)(_textureBuffer[(i * 5)] + 1);
                 pixelCount += pixelEntryCount;
-                if (pixelEntryCount > highestAlpha) highestAlpha = pixelEntryCount;
                 while (pixelEntryCount > 0)
                 {
                     if ((pixelOffset / width) >= height)
@@ -162,7 +160,7 @@ namespace MIA_Manager
                 "Textures: " + textureDataTable.Rows.Count + "\n" +
                 "Resolution: " + width + " x " + height + "\n" +
                 "ID: " + ID + "\n" +
-                "Size: " + arraySize * 5 + " Bytes (" + pixelCount + " Pixels) " + highestAlpha;
+                "Size: " + arraySize * 5 + " Bytes (" + pixelCount + " Pixels) ";
 
             zoomTexture(zoom);
         }
